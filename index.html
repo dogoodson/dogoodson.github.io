@@ -77,7 +77,16 @@
         border:thick double #4a5b53;
       }
     </style>
-<!-- Setup Google Analytics -->
+
+    <script type="text/javascript">
+      window.onload = init;
+
+      function init()
+      {
+        var year = new Date().getFullYear();
+        document.getElementById('copyrightRecentYear').innerHTML = year;
+      }
+    </script>
 
 <!-- You can set your favicon here -->
 <!-- link rel="shortcut icon" type="image/x-icon" href="/cayman/favicon.ico" -->
@@ -109,7 +118,7 @@
     </main>
 
     <footer class="site-footer">
-      Copyright 2023 | Donnie Goodson
+      Copyright &copy; 2023 – <span id="copyrightRecentYear">....</span>. | Donnie Goodson. | All rights reserved.
     </footer>
   </body>
 </html>
