@@ -84,6 +84,9 @@
       function init()
       {
         var year = new Date().getFullYear();
+        if (year < 2024) {
+          year = 2024;
+        }
         document.getElementById('copyrightRecentYear').innerHTML = year;
       }
     </script>
