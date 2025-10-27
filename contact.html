@@ -46,10 +46,10 @@
       /* circular profile photo in the upper-left */
       .profile-photo {
         position: absolute;
-        top: 1rem;
-        left: 1rem;
-        width:10em;
-        height: 10em;
+        top: 2rem;
+        left: 2rem;
+        width:14em;
+        height: 14em;
         border-radius: 50%;
         object-fit: cover;
         box-shadow: 0 6px 18px rgba(0,0,0,0.35);
@@ -58,15 +58,14 @@
       }
 
       /* responsive: stack and center the photo on small screens */
-      @media (max-width: 790px) {
+      @media (max-width: 968px) {
         .profile-photo {
           position: static;
           display: block;
           margin: 0 auto 1rem;
-          width: 80px;
-          height: 80px;
         }
       }
+
       .project-name {
         margin-top: 0.6em;
       }
