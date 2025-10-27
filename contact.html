@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Contact — Donnie Goodson</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+  <body>
+    <header class="page-header" role="banner">
+      <h1 class="project-name">Contact — Donnie Goodson</h1>
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <section class="container" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Scan to contact</h2>
+        <!-- replace media/qr.png with your QR image filename -->
+        <img src="media/qr.png" alt="QR code to contact Donnie Goodson" class="qr">
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      Copyright &copy; 2023 – <span id="copyrightRecentYear">....</span>. | Donnie Goodson.
+    </footer>
+
+    <script type="text/javascript">
+      window.onload = init;
+      function init() {
+        var year = new Date().getFullYear();
+        if (year < 2024) { year = 2024; }
+        var el = document.getElementById('copyrightRecentYear');
+        if (el) el.innerHTML = year;
+      }
+    </script>
+  </body>
+</html>
