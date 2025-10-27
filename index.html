@@ -60,7 +60,33 @@
         background-image: url('media/combined.jpg');
         background-repeat: no-repeat;
         background-size: cover;
-        margin: 1.25em 1em 1em 1em
+        margin: 1.25em 1em 1em 1em;
+        position: relative;
+      }
+
+      /* circular profile photo in the upper-left */
+      .profile-photo {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        width:10em;
+        height: 10em;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+        border: 3px solid rgba(255,255,255,0.9);
+        z-index: 10;
+      }
+
+      /* responsive: stack and center the photo on small screens */
+      @media (max-width: 600px) {
+        .profile-photo {
+          position: static;
+          display: block;
+          margin: 0 auto 1rem;
+          width: 80px;
+          height: 80px;
+        }
       }
 
       .project-name {
@@ -119,7 +145,10 @@
   </head>
   <body>
     <header class="page-header" role="banner">
-      <h1 class="project-name"><p class="project-name">Hello 👋, I'm</p>Donnie Goodson</h1>
+      <!-- profile photo: replace media/profile.jpg with your filename -->
+      <img src="media/selfie_oct_2025_sq.jpg" alt="Donnie Goodson" class="profile-photo">
+
+      <h1 class="project-name"><p class="project-name">Hello 👋, I'm</p> Donnie Goodson</h1>
       <a href="https://www.linkedin.com/in/dogoodson/" class="btn">
         <h2>LinkedIn</h2>
         <img class="social" src="media/InBug-Black.png" alt="LinkedIn" />
